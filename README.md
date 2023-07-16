@@ -15,6 +15,8 @@ For encryption:
 - After pressed Encrypt button you'll see Encrypted Text below the button
 
 
+![image](https://github.com/Metrohan/RSA-EncrypterDecrypter/assets/54481595/982f20c4-38c2-44d3-b5e3-e19e1b4c553a)
+
 
 For decryption:
 
@@ -23,6 +25,7 @@ For decryption:
 - After pressed Decrypt button you'll see Decrypted Text below the button
 
 
+![image](https://github.com/Metrohan/RSA-EncrypterDecrypter/assets/54481595/33ce92bb-ce7f-4154-b6d1-ced434112a42)
 
 
 # Notes
