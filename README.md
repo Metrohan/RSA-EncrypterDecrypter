@@ -1,6 +1,6 @@
-# RSA Encrypter-Decrypter
+# RSA Encrypter/Decrypter
 
-This program mostly useful for studying computer engineers or computer science students. I used this program at my discrete math midterm. I thought it might be useful for anyone. Feel free to use my code.
+This program mostly useful for who studies computer engineers or computer science. I used this program at my discrete math midterm. I thought it might be useful for anyone. Feel free to use my code.
 
 If you dont have an idea about RSA Encrypt or Decryption, check this link https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 
