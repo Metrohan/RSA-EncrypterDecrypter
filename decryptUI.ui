@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>RSA</class>
- <widget class="QMainWindow" name="RSA">
-  <property name="windowModality">
-   <enum>Qt::NonModal</enum>
-  </property>
-  <property name="enabled">
-   <bool>true</bool>
-  </property>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -23,23 +17,173 @@
    <iconset>
     <normaloff>../../../Downloads/Untitled.ico</normaloff>../../../Downloads/Untitled.ico</iconset>
   </property>
-  <property name="windowOpacity">
-   <double>1.000000000000000</double>
-  </property>
   <property name="autoFillBackground">
-   <bool>true</bool>
-  </property>
-  <property name="tabShape">
-   <enum>QTabWidget::Rounded</enum>
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="encLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>40</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>100</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="qLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>100</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="eKeyLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>150</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>200</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Decrypt</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>290</y>
+      <width>181</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="EncBlockText">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Encrypted</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pText">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>100</y>
+      <width>20</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>p</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="qText">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>16</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>q</string>
+    </property>
+   </widget>
    <widget class="QLabel" name="eKeyText">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>80</y>
-      <width>111</width>
-      <height>41</height>
+      <x>60</x>
+      <y>150</y>
+      <width>51</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -51,31 +195,13 @@
      <string>e Key</string>
     </property>
    </widget>
-   <widget class="QLabel" name="nKeyText">
+   <widget class="QLabel" name="DecText">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>130</y>
-      <width>111</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>n Key (or p*q)</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="EncryptedText">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>250</y>
+      <x>120</x>
+      <y>260</y>
       <width>141</width>
-      <height>41</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -84,119 +210,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Encrypted Word</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="BlockText">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>30</y>
-      <width>51</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Word</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>292</y>
-      <width>171</width>
-      <height>73</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QTextEdit" name="result">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="acceptDrops">
-        <bool>false</bool>
-       </property>
-       <property name="tabChangesFocus">
-        <bool>true</bool>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-       <property name="acceptRichText">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QLineEdit" name="blockLineEdit">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>40</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="eKeyLineEdit">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>90</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="nKeyLineEdit">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>140</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="encryptButton">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>200</y>
-      <width>121</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Encrypt</string>
+     <string>Decrypted Word</string>
     </property>
    </widget>
    <widget class="QPushButton" name="EncryptMenuButton">
@@ -218,7 +232,7 @@
      <bool>true</bool>
     </property>
     <property name="checked">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="DecryptMenuButton">
@@ -236,6 +250,30 @@
     <property name="text">
      <string>Decrypt</string>
     </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Word</string>
+    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -252,11 +290,6 @@
   <action name="actionClose">
    <property name="text">
     <string>Close</string>
-   </property>
-  </action>
-  <action name="actionDecrypt_2">
-   <property name="text">
-    <string>Decrypt</string>
    </property>
   </action>
  </widget>
