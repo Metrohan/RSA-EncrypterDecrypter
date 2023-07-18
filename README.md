@@ -30,6 +30,6 @@ For decryption:
 
 # Notes
 
-Unfortunately, this program supports max 4-letter words. After entering 4 letter words, program doesn't correctly encrypt your word.
+Unfortunately, this program supports max 4-letter words. After entering longer than 4-letter words, program doesn't correctly encrypt your word.
 
 
