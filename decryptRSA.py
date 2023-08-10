@@ -7,8 +7,6 @@ def decrypt(block, block2, d, nKey):
     b = 1
     c = 1
 
-    print(block, block2)
-
     while a != 0:
         b = (block * b)
         a = a - 1
