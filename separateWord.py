@@ -1,7 +1,6 @@
 def separate1(word):
     word = word.strip()
     word = word.lower()
-    print(word)
     blocks1 = []
     blocks2 = []
 
