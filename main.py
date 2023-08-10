@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QApplication, QDesktopWidget
 from PyQt5 import QtWidgets
+from PyQt5.QtGui import *
 import sys
 import string
 
@@ -20,8 +21,7 @@ class MyGUI(QtWidgets.QMainWindow, encryptUI.Ui_RSA):
         self.setFixedSize(400, 400)
 
         self.encryptButton.clicked.connect(self.button_click)
-        self.DecryptMenuButton.clicked.connect(self.switch_to_decrypt_ui)
-
+        self.actionDecryptE.triggered.connect(self.switch_to_decrypt_ui)
 
     def block(self):
         word_ = self.blockLineEdit.text()
@@ -43,11 +43,14 @@ class MyGUI(QtWidgets.QMainWindow, encryptUI.Ui_RSA):
             _nKey = int(self.nKey())
             if _eKey > _nKey:
                 self.result.setText("e Key cannot greater than n Key!")
+
             else:
                 result_ = encryptRSA.encrypt(_block, _block2, _eKey, _nKey)
+                self.result.setFont(QFont('Arial', 14))
                 self.result.setText(str(result_))
         except ValueError:
-            self.result.setText("Integers only!")
+            self.result.setFont(QFont('Arial', 10))
+            self.result.setText("Please check your values. You must enter a word and two numeric keys.")
         except Exception as e:
             self.result.setText(str(e))
 
@@ -67,7 +70,7 @@ class MyGUI2(QtWidgets.QMainWindow, decryptUI.Ui_MainWindow):
         self.setFixedSize(400, 400)
 
         self.pushButton.clicked.connect(self.button_click2)
-        self.EncryptMenuButton.clicked.connect(self.switch_to_encrypt_ui)
+        self.actionEncyrptD.triggered.connect(self.switch_to_encrypt_ui)
 
     def block(self):
         block_ = self.encLineEdit.text()
@@ -96,8 +99,12 @@ class MyGUI2(QtWidgets.QMainWindow, decryptUI.Ui_MainWindow):
             _eKey = int(self.eKey())
             _d = pow(_eKey, -1, _invModNum)
             result_ = decryptRSA.decrypt(_block, _block2, _d, _nKey)
+            self.textEdit.setFont(QFont('Arial', 14))
             self.textEdit.setText(str(result_))
 
+        except ValueError:
+            self.textEdit.setFont(QFont('Arial', 10))
+            self.textEdit.setText("Please check your values. You must enter a word, two integers and a numeric key.")
         except Exception as e:
             self.textEdit.setText(str(e))
 
@@ -109,7 +116,6 @@ class MyGUI2(QtWidgets.QMainWindow, decryptUI.Ui_MainWindow):
 
 
 def main():
-    print("Starting the application")
     app = QApplication(sys.argv)
     main_widget = MyGUI()
     main_widget.show()
