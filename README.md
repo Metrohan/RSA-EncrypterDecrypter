@@ -1,8 +1,8 @@
 # RSA Encrypter/Decrypter
 
-This program mostly useful for who studies computer engineering or computer science. I used this program at my discrete math midterm. It might be useful for anyone I think. Feel free to use my code.
+This program mostly useful for who studies computer engineering or computer science. I used this program at my discrete math midterm. Feel free to use my code.
 
-If you dont have an idea about RSA Encrypt or Decryption, check this link https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+If you don't have an idea about RSA Encrypt or Decryption, check this link https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 
 # Instructions
 For encryption:
@@ -32,6 +32,6 @@ For decryption:
 
 # Notes
 
-Unfortunately, this program supports max 4-letter words. After entering longer than 4-letter words, the program doesn't correctly encrypt your word.
+Unfortunately, this program supports max 4-letter words. After entering longer than 4-letter words, the program doesn't encrypt your word correctly.
 
 
