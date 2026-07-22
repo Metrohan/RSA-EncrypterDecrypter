@@ -1,3 +1,11 @@
+> **Project Status: Complete — Educational**
+>
+> This repository is preserved as a learning record and has reached its intended scope.
+
+> **Security Notice**
+>
+> This repository is intended for educational purposes only and must not be used for production cryptography.
+
 # RSA Encrypter/Decrypter
 
 This program is particularly useful for students studying Computer Engineering or Computer Science. I originally used it for my Discrete Mathematics midterm, and you're welcome to use or modify the code as needed.
@@ -33,4 +41,4 @@ For decryption:
 # Notes
 This program currently supports a maximum of four-letter words.
 If a word longer than four letters is entered, encryption may not work correctly.
-
+
